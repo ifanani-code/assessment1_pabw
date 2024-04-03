@@ -43,6 +43,19 @@
                 alert("Jumlah buku tidak boleh kosong!");
                 return;
             }
+
+            // Cari buku yang dipilih dalam array
+            let bukuDitemukan = false;
+            for (let i = 0; i < buku.length; i++) {
+                if (buku[i].nama === pilihanBuku) {
+                    bukuDitemukan = true;
+                }
+            }
+
+            // Jika buku tidak ditemukan
+            if (!bukuDitemukan) {
+                alert("Buku " + pilihanBuku + " tidak ditemukan!");
+            }
         }
     </script>
 </body>
