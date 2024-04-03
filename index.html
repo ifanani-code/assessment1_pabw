@@ -50,6 +50,11 @@
                 if (buku[i].nama === pilihanBuku) {
                     bukuDitemukan = true;
                 }
+                 // Cek apakah jumlah yang diinputkan lebih banyak dari stock
+                if (jumlah > buku[i].jumlah) {
+                        alert("Jumlah buku " + pilihanBuku + " tidak tersedia!");
+                        return;
+                    }
             }
 
             // Jika buku tidak ditemukan
