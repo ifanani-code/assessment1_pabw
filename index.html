@@ -14,7 +14,7 @@
         <h3>Kelas : D3SI-46-04</h3>
     </div>
 
-    <form>
+    <form onsubmit="cekBuku()">
         <label for="jumlah">Jumlah Buku:</label>
         <input type="number" id="jumlah" name="jumlah">
         <br><br>
@@ -29,6 +29,12 @@
     </form>
 
     <script>
+        let buku = [
+            {"nama": "sherlock", "jumlah": 2},
+            {"nama": "lupin", "jumlah": 2},
+            {"nama": "aladin", "jumlah": 2},
+        ];
+
         function cekBuku() {
             let jumlah = document.getElementById("jumlah").value;
             let pilihanBuku = document.getElementById("buku").value;
